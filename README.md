@@ -1,0 +1,1 @@
+Este repositório foi criado como parte do desafio de estágio da AlphaCode, com o objetivo de desenvolver uma aplicação de gerenciamento de contatos. O projeto implementa as operações básicas de um CRUD (Create, Read, Update, Delete), utilizando as tecnologias HTML5, CSS, JavaScript, Bootstrap, Angular e MySQL.
