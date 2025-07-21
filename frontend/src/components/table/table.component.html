@@ -1,0 +1,25 @@
+<div class="table-container">
+    <table class="data-table">
+        <thead>
+            <tr class="table-header">
+                <th class="table-column">Nome</th>
+                <th class="table-column">Data de nascimento</th>
+                <th class="table-column">E-mail</th>
+                <th class="table-column">Celular para contato</th>
+                <th class="table-column">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-row" *ngFor="let contato of contatos">
+                <td class="table-data">{{ contato.nome }}</td>
+                <td class="table-data">{{ contato.nascimento | date: 'dd/MM/yyyy' }}</td>
+                <td class="table-data">{{ contato.email }}</td>
+                <td class="table-data">{{ contato.celular }}</td>
+                <td class="table-data">
+                    <button class="table-button edit-btn" (click)="editarContato(contato)"></button>
+                    <button class="table-button delete-btn" (click)="excluirContato(contato.id)"></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
