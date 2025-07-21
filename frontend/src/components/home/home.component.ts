@@ -1,5 +1,5 @@
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators, FormControl } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
 import { ContatosService } from '../../services/contatos.service';
 import { CommonModule } from '@angular/common';
 import { Contato } from '../../../types/interfaces';
@@ -66,4 +66,34 @@ export class HomeComponent implements OnInit {
       });
     }
   }
-}
+
+   form = new FormGroup({
+      nome: new FormControl('', [
+        Validators.required,
+        Validators.minLength(3)
+      ]),
+      email: new FormControl('', [
+        Validators.required,
+        Validators.email
+      ]),
+      telefone: new FormControl('', [
+        Validators.required,
+        Validators.minLength(10),
+        Validators.maxLength(10)
+      ]),
+      celular: new FormControl('', [
+        Validators.required,
+        Validators.minLength(11),
+        Validators.maxLength(11)
+      ]),
+      profissao: new FormControl('', [
+        Validators.required,
+        Validators.minLength(2),
+        Validators.maxLength(100)
+      ]),
+      nascimento: new FormControl('', Validators.required),
+      whatsapp: new FormControl(false),
+      sms: new FormControl(false),
+      notificarEmail: new FormControl(false),
+    });
+  }
