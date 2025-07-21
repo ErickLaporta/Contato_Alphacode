@@ -1,0 +1,21 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--cor-fundo);
+    padding: 1rem 5rem 1rem 2rem;
+    margin-top: auto;
+}
+
+.footer-text {
+    color: var(--cor-fonte);
+    font-size: var(--tamanho-fonte);
+    font-family: var(--fonte-principal);
+    font-weight: var(--fonte-negrito);
+}
+
+.footer-logo {
+    height: 2rem;
+    width: auto;
+    vertical-align: middle;
+}
