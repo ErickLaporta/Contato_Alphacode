@@ -23,12 +23,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.contatoForm = this.formBuilder.group({
-      nome: [''],
-      email: [''],
-      telefone: [''],
-      celular: [''],
-      profissao: [''],
-      nascimento: [''],
+      nome: ['', [Validators.required, Validators.minLength(3)]],
+      email: ['', [Validators.required, Validators.email]],
+      telefone: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]],
+      celular: ['', [Validators.required, Validators.minLength(11), Validators.maxLength(11)]],
+      profissao: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(100)]],
+      nascimento: ['', Validators.required],
       whatsapp: [false],
       sms: [false],
       notificarEmail: [false],
@@ -66,34 +66,4 @@ export class HomeComponent implements OnInit {
       });
     }
   }
-
-   form = new FormGroup({
-      nome: new FormControl('', [
-        Validators.required,
-        Validators.minLength(3)
-      ]),
-      email: new FormControl('', [
-        Validators.required,
-        Validators.email
-      ]),
-      telefone: new FormControl('', [
-        Validators.required,
-        Validators.minLength(10),
-        Validators.maxLength(10)
-      ]),
-      celular: new FormControl('', [
-        Validators.required,
-        Validators.minLength(11),
-        Validators.maxLength(11)
-      ]),
-      profissao: new FormControl('', [
-        Validators.required,
-        Validators.minLength(2),
-        Validators.maxLength(100)
-      ]),
-      nascimento: new FormControl('', Validators.required),
-      whatsapp: new FormControl(false),
-      sms: new FormControl(false),
-      notificarEmail: new FormControl(false),
-    });
   }
