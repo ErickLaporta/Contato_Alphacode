@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 export class TableComponent implements OnInit {
   contatos: Contato[] = [];
 
-  constructor(private contatosService: ContatosService, private contatoService: ContatosService) { }
+  constructor(private contatosService: ContatosService) { }
 
   ngOnInit() {
     this.contatosService.listarContatos().subscribe((contatos: Contato[]) => {
@@ -29,6 +29,6 @@ export class TableComponent implements OnInit {
   }
 
   editarContato(contato: Contato) {
-    this.contatoService.salvarContato(contato);
+    this.contatosService.salvarContato(contato);
   }
 }
