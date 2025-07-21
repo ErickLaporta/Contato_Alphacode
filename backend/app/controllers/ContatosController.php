@@ -30,10 +30,7 @@ class ContatosController {
         }
     }
 
-    public function cadastrarContato($dados) {
-        $erro = $this->validarDados($dados);
-        if ($erro) return $erro;
-        
+    public function cadastrarContato($dados) {        
         return $this->contatoModel->cadastrarContato($dados);
     }
 

@@ -22,6 +22,11 @@ class ContatosRoutes {
 
         header('Content-Type: application/json');
 
+        if ($method === 'OPTIONS') {
+         http_response_code(200);
+         return;
+        }
+        
         if ($method === 'GET' && $uri === '/contatos') {
             $resultado = $this->controller->listarContatos();
             echo json_encode($resultado);

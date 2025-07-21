@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS contatos (
     celular VARCHAR(20) NOT NULL,
     profissao VARCHAR(255) NOT NULL,
     nascimento DATE NOT NULL,
-    whatsapp BOOLEAN NOT NULL DEFAULT 0,
-    sms BOOLEAN NOT NULL DEFAULT 0,
-    notificarEmail BOOLEAN NOT NULL DEFAULT 0
+    whatsapp TINYINT(1) DEFAULT 0,
+    sms TINYINT(1) DEFAULT 0,
+    notificarEmail TINYINT(1) DEFAULT 0
 );
