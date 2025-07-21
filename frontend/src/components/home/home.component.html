@@ -42,7 +42,7 @@
                        class="error-message">A profissão é obrigatória.</small>
 
                 <label for="celular" class="form-label">Celular para contato</label>
-                <input type="tel" id="celular" class="form-input" 
+                <input type="text" id="celular" class="form-input" 
                        formControlName="celular" placeholder="Ex.: (11)98493-2039" required maxlength="11">
                 <small *ngIf="contatoForm.get('celular')?.hasError('required') && contatoForm.get('celular')?.touched" 
                        class="error-message">O celular é obrigatório.</small>
