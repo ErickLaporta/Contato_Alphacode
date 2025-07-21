@@ -90,6 +90,12 @@
     align-items: center;
 }
 
+.submit-button:disabled {
+    background-color: var(--cor-fundo);
+    color: #666;
+    font-weight: var(--fonte-negrito);
+}
+
 
 .full-width {
     grid-column: 1 / -1;

@@ -69,7 +69,7 @@
         </div>
 
         <div class="button-container">
-            <button type="submit" class="submit-button">
+            <button type="submit" class="submit-button" [disabled]="contatoForm.invalid">
                 {{ contato ? 'Atualizar contato' : 'Cadastrar contato' }}
             </button>
         </div>
